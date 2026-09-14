@@ -11,7 +11,7 @@ blur {
 animations {
     // Uncomment to turn off all animations.
     // You can also put "off" into each individual animation to disable it.
-    // off
+    off
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     // slowdown 0.8
     // Individual animations.
@@ -101,13 +101,13 @@ layout {
         on
         width 2
         // active-color "#60967d"
-        active-color "#86adcd"
+        // active-color "#86adcd"
         // active-color "#d1d1d1"
         // active-color "#ffffff"
-        // active-color "#323231"
+        active-color "#323231"
         // on
-        inactive-color "#323231"
-        // inactive-color "#222221"
+        // inactive-color "#323231"
+        inactive-color "#222221"
         urgent-color "#86adcd"
     }
     shadow {
