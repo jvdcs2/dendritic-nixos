@@ -1,0 +1,104 @@
+// layer-rule {
+//     match namespace="vicinae"
+//     shadow {
+//     }
+//     // Optional: match your window corner radius so the shadow isn't square
+// }
+window-rule {
+    match app-id="org.gtk.Dialogs"
+    default-column-width { proportion 0.9; }
+    default-window-height { proportion 0.9; }
+}
+layer-rule {
+    match namespace="^vicinae$"
+    background-effect {
+        blur true
+        xray false
+    }
+    geometry-corner-radius 12
+}
+window-rule {
+    match app-id="kitty*"
+
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="niri_"
+    open-floating true
+    default-window-height {
+        proportion 0.6
+    }
+    default-column-width {
+        proportion 0.6
+    }
+}
+window-rule {
+    match app-id="fzf-kmux"
+    open-floating true
+    default-window-height {
+        proportion 0.6
+    }
+    default-column-width {
+        proportion 0.6
+    }
+}
+window-rule {
+    match app-id="niri_jump"
+    open-floating true
+    default-window-height {
+        proportion 0.35
+    }
+    default-column-width {
+        proportion 0.3
+    }
+}
+window-rule {
+    match app-id="xdg"
+    open-floating true
+    default-window-height {
+        proportion 0.5
+    }
+    default-column-width {
+        proportion 0.5
+    }
+}
+window-rule {
+    match title="Library"
+    open-floating true
+    default-window-height {
+        proportion 0.5
+    }
+    default-column-width {
+        proportion 0.5
+    }
+}
+window-rule {
+    match app-id=".blueman"
+    open-floating true
+    default-window-height {
+        proportion 0.5
+    }
+    default-column-width {
+        proportion 0.5
+    }
+}
+window-rule {
+    match app-id="nm-connection-editor"
+    open-floating true
+    default-window-height {
+        proportion 0.5
+    }
+    default-column-width {
+        proportion 0.5
+    }
+}
+window-rule {
+    match app-id="^org\\.keepassxc\\.KeePassXC$"
+    block-out-from "screen-capture"
+ // Use this instead if you want them visible on third-party screenshot tools.
+    // block-out-from "screencast"
+}

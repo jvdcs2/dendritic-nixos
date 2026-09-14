@@ -1,0 +1,14 @@
+// === stops programs from casting own shadows ===
+prefer-no-csd
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+screenshot-path "~/saves/images/screenshots/%H-%M-%S %Y-%m-%d.png"

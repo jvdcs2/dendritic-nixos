@@ -1,0 +1,118 @@
+recent-windows {
+    binds {
+        Alt+Tab         { next-window; }
+        Alt+Shift+Tab   { previous-window; }
+        Alt+grave       { next-window     filter="app-id"; }
+        Alt+Shift+grave { previous-window filter="app-id"; }
+    }    
+}
+binds {
+    Super+Period       allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+"; }
+    Super+Comma        allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
+    Super+Shift+Period allow-when-locked=true { spawn-sh "brightnessctl --class=backlight set +5%"; }
+    Super+Shift+Comma  allow-when-locked=true { spawn-sh "brightnessctl --class=backlight set 5%-"; }
+
+    Super+Shift+M      repeat=false           { spawn-sh "~/.config/niri/scripts/sh/reload-emacs.sh"; }
+    Super+Shift+P      repeat=false           { spawn-sh "~/.config/niri/scripts/sh/color-picker.sh"; }
+    Super+G            repeat=false           { spawn-sh "~/.config/niri/scripts/sh/steam-wrapper.sh"; }
+    Super+Y            repeat=false           { spawn-sh "~/.config/niri/scripts/sh/yacal.sh"; }
+    Super+Q            repeat=false           { spawn-sh "~/.config/niri/scripts/sh/emacs-scratch.sh"; }
+    Super+Shift+Q      repeat=false           { spawn-sh "~/.config/niri/scripts/sh/emacs-open-scratch.sh"; }
+    // Super+T            repeat=false           { spawn-sh "~/.config/niri/scripts/sh/emacs-todo.sh"; }
+    Super+T            repeat=false           { spawn-sh "todoist-electron"; }
+
+    Super+S               { screenshot show-pointer=false; }
+    Super+Shift+S         { spawn-sh "kitty yazi ~/saves/images/screenshots"; }
+
+    Super+Space        repeat=false           { spawn-sh "vicinae toggle"; }
+    Super+P            repeat=false           { spawn-sh "vicinae vicinae://launch/clipboard/history"; }
+    Super+Tab          repeat=false           { spawn-sh "vicinae vicinae://launch/@knoopx/vicinae-extension-niri-0/windows"; }
+    Super+Slash        repeat=false           { spawn-sh "vicinae vicinae://launch/files/search"; }
+
+    Super+Shift+Space  repeat=false           { spawn-sh "nu ~/.config/niri/scripts/nu/custom-run.nu"; }
+    Super+E            repeat=false           { spawn-sh "nu ~/.config/niri/scripts/nu/yazi-kmux.nu"; }
+    Super+N            repeat=false           { spawn-sh "nu ~/.config/niri/scripts/nu/fzf-kmux.nu"; }
+    Super+Shift+N      repeat=false           { spawn-sh "nu ~/.config/niri/scripts/nu/new-kmux.nu"; }
+                
+    Super+Shift+B      repeat=false           { spawn-sh "kitty btop"; }
+    Super+B            repeat=false           { spawn-sh "zen-beta"; }
+    Super+M            repeat=false           { spawn-sh "emacsclient -c"; }
+    Super+V            repeat=false           { spawn-sh "code"; }
+
+    Super+O            repeat=false           { toggle-overview; }
+    Super+C            repeat=false           { close-window; }
+
+    // === NAVIGATION ===
+    Super+H            repeat=false allow-inhibiting=false { focus-column-left; }
+    Super+K            repeat=false allow-inhibiting=false { focus-workspace-up; }
+    Super+J            repeat=false allow-inhibiting=false { focus-workspace-down; }
+    Super+L            repeat=false allow-inhibiting=false { focus-column-right; }
+    Super+Shift+H      repeat=false allow-inhibiting=false { move-column-left; }
+    Super+Shift+J      repeat=false allow-inhibiting=false { move-column-to-workspace-down; }
+    Super+Shift+K      repeat=false allow-inhibiting=false { move-column-to-workspace-up; }
+    Super+Shift+L      repeat=false allow-inhibiting=false { move-column-right; }
+    //
+    Super+D             repeat=false  { focus-window-down; }
+    Super+U             repeat=false  { focus-window-up; }
+    Super+Shift+U       repeat=false  { move-workspace-up; }
+    Super+Shift+D       repeat=false  { move-workspace-down; }
+    Super+Shift+V       repeat=false  { toggle-window-floating; }
+    //
+    // Super+Shift+G         { focus-column-last; }
+    // Super+G               { focus-column-first; }
+
+    // === SCROLL ===
+    Super+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+    Super+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+    Super+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+    Super+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+    Super+WheelScrollRight      { focus-column-right; }
+    Super+WheelScrollLeft       { focus-column-left; }
+    Super+Ctrl+WheelScrollRight { move-column-right; }
+    Super+Ctrl+WheelScrollLeft  { move-column-left; }
+    //
+    Super+Shift+WheelScrollDown      { focus-column-right; }
+    Super+Shift+WheelScrollUp        { focus-column-left; }
+    Super+Ctrl+Shift+WheelScrollDown { move-column-right; }
+    Super+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+
+    // === WORKSPACES ===
+    Super+1       { focus-workspace 1; }
+    Super+2       { focus-workspace 2; }
+    Super+3       { focus-workspace 3; }
+    Super+4       { focus-workspace 4; }
+    Super+5       { focus-workspace 5; }
+    Super+6       { focus-workspace 6; }
+    Super+7       { focus-workspace 7; }
+    Super+8       { focus-workspace 8; }
+    Super+9       { focus-workspace 9; }
+    Super+Shift+1 { move-column-to-workspace 1; }
+    Super+Shift+2 { move-column-to-workspace 2; }
+    Super+Shift+3 { move-column-to-workspace 3; }
+    Super+Shift+4 { move-column-to-workspace 4; }
+    Super+Shift+5 { move-column-to-workspace 5; }
+    Super+Shift+6 { move-column-to-workspace 6; }
+    Super+Shift+7 { move-column-to-workspace 7; }
+    Super+Shift+8 { move-column-to-workspace 8; }
+    Super+Shift+9 { move-column-to-workspace 9; }
+    //
+    Super+BracketLeft  { consume-or-expel-window-left; }
+    Super+BracketRight { consume-or-expel-window-right; }
+
+    // === WINDOW WIDTH CONTROL ===
+    Super+F          repeat=false { maximize-column; }
+    Super+Ctrl+h      { set-column-width "33.33333333%";}
+    Super+Ctrl+j      { set-column-width "50%";}
+    Super+Ctrl+k      { set-column-width "66.66666667%";}
+    Super+Ctrl+l      { set-column-width "100%";}
+
+    Super+Minus       { set-column-width "-10%"; }
+    Super+Equal       { set-column-width "+10%"; }
+    Super+Shift+Minus { set-window-height "-10%"; }
+    Super+Shift+Equal { set-window-height "+10%"; }
+
+    Super+Shift+F     { fullscreen-window; }
+
+    Super+W           { toggle-column-tabbed-display; }
+    Super+Shift+X     { quit; }
+}

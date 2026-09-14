@@ -1,0 +1,128 @@
+* {
+  padding: 1px 4px 1px 4px;
+  font-size: 12.4px;
+  /* font-size: 10.8px; */
+  /* font-family: "DeepMind Sans"; */
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: 500;
+  /* color: #d1d1d1; */
+  color: #ffffff;
+}
+
+window#waybar {
+  all: unset;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#custom-rec.recording {
+  color: #ff968c;
+}
+
+#custom-monclock {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+#custom-waybar-agenda {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+#custom-waybar-agenda {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.modules-left {
+  margin: 6px 0px 0px 0px;
+}
+
+.modules-center {
+  margin: 6px 0px 0px 0px;
+}
+
+.modules-right {
+  margin: 6px 0px 0px 0px;
+}
+
+tooltip {
+  background: #1a1a19;
+  color: #d1d1d1;
+}
+
+#clock {
+  padding: 0px 0px;
+}
+
+#workspaces {
+  padding: 0px 0px;
+}
+
+#tray {
+  padding: 0px 0px;
+}
+
+#workspaces button {
+  all: unset;
+  margin: 0px 0px 0px 0px;
+  /* color: #505659; */
+}
+
+#workspaces button.active {
+  border: none;
+}
+
+#workspaces button.empty.active {
+  border: none;
+}
+
+#workspaces button.empty {
+  border: none;
+}
+
+#bluetooth {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 5px;
+}
+
+#network {
+  padding: 0px 5px;
+}
+
+#battery {
+  padding: 0px 5px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#battery.charging {
+  color: #61957f;
+}
+
+#battery.warning:not(.charging) {
+  color: #ffc591;
+}
+
+#battery.critical:not(.charging) {
+  color: #ff968c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#custom-sepr,
+#custom-sepl {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  color: alpha(#606060, 1);
+  /* text-shadow: 1px 0px 0px rgba(64, 64, 64, 1); */
+}
+
+#custom-expand:hover {
+  color: rgba(255, 255, 255, .2);
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, .5);
+}

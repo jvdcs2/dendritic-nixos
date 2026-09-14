@@ -1,0 +1,185 @@
+{
+  "layer": "top",
+  "position": "top",
+  "reload_style_on_change": true,
+  "modules-left": [
+    "custom/procs",
+    "memory",
+    "custom/temp",
+    "cpu",
+    // "niri/workspaces",
+    "tray"
+  ],
+  "modules-center": [
+    "custom/monclock"
+    // "custom/sepr"
+    // "custom/waybar-agenda"
+  ],
+  "modules-right": [
+    "custom/net",
+    "custom/syncthing",
+    // "systemd-failed-units",
+    "bluetooth",
+    "backlight",
+    "battery",
+    "pulseaudio",
+    "custom/rec"
+  ],
+  //
+  //
+  // 
+  //                
+  "custom/sepl": {
+    "format": "|"
+  },
+  "custom/sepr": {
+    "format": " | "
+  },
+  "custom/temp": {
+    "on-click": "kitty btop",
+    "exec": "~/.config/waybar/temp.sh",
+    "return-type": "json"
+  },
+  "custom/waybar-agenda": {
+    "on-click": "emacsclient -c -e \"(org-agenda-list)\"",
+    "exec": "~/.config/waybar/waybar-agenda.sh",
+    "return-type": "json"
+  },
+  "custom/rec": {
+    "on-click": "~/.config/waybar/rec.sh",
+    "on-click-right": "nu ~/.config/niri/scripts/nu/yazi-kmux.nu ~/saves/videos/rec",
+    "exec": "cat ~/.rec_state.json",
+    "return-type": "json",
+    "format": "{text}",
+    "signal": 1
+  },
+  "custom/syncthing": {
+    "on-click": "zen http://localhost:8384/",
+    "exec": "~/.config/waybar/syncthing.sh",
+    "return-type": "json"
+  },
+  "custom/net": {
+    "on-click": "zen https://www.speedtest.net/",
+    "exec": "~/.config/waybar/net.sh",
+    "return-type": "json"
+  },
+  "custom/procs": {
+    "on-click": "kitty btop",
+    "exec": "~/.config/waybar/procs.sh",
+    "return-type": "json"
+  },
+  "custom/monclock": {
+    "on-click": "zen https://calendar.google.com/calendar/u/0/r",
+    "exec": "~/.config/waybar/monclock.sh",
+    "return-type": "json"
+  },
+  "tray": {
+    "icon-size": 12
+  },
+  //
+  // 
+  // 
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": " ",
+      "default": " "
+    },
+    "persistent-workspaces": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  //
+  //
+  // 
+  "systemd-failed-units": {
+    "hide-on-ok": true, //dont hide if there is zero failed units.
+    "on-click": "kitty -e sh -c 'systemctl --failed; systemctl --failed --user; exec $SHELL'",
+    "format": " {nr_failed}",
+    "system": true,
+    "user": true
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "{icon}  -",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "easyeffects",
+    "scroll-step": 1
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}  {percent}%",
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ]
+  },
+  "bluetooth": {
+    "format-on": "󰂯 -",
+    "format-off": "󰂯 off",
+    "format-disabled": "󰂲",
+    "format-connected-battery": "󰂯 {device_battery_percentage}%-{device_alias}",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
+    "on-click": "blueman-manager"
+  },
+  "battery": {
+    "interval": 1,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "󰁻",
+      "󰁼",
+      "󰁾",
+      "󰂀",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+  "network": {
+    "format-wifi": " ",
+    "format-disconnected": " ",
+    "tooltip-format-disconnected": "Error",
+    "tooltip-format-wifi": "{essid}({signalStrength}%)"
+  },
+  "cpu": {
+    "on-click": "kitty btop",
+    "interval": 1,
+    "format": "  {icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
+    "format-icons": [
+      "<span color='#61957f'>▁</span>", // green
+      "<span color='#8db4d4'>▂</span>", // blue
+      "<span color='#d1d1d1'>▃</span>", // white
+      "<span color='#d1d1d1'>▄</span>", // white
+      "<span color='#ffc591'>▅</span>", // yellow
+      "<span color='#ffc591'>▆</span>", // yellow
+      "<span color='#ff968c'>▇</span>", // red
+      "<span color='#ff968c'>█</span>" // red
+    ]
+  },
+  "memory": {
+    "on-click": "kitty btop",
+    "interval": 1,
+    "format": "  {used:1.0f}G/{total:1.0f}G"
+  }
+}

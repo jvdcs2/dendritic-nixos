@@ -1,0 +1,10 @@
+spawn-at-startup "xwayland-satellite" 
+spawn-at-startup "keyd-application-mapper" "-d"
+
+include "window-rules.kdl"
+include "background.kdl"
+include "visual.kdl"
+include "debug.kdl"
+include "input.kdl"
+include "misc.kdl"
+include "maps.kdl"

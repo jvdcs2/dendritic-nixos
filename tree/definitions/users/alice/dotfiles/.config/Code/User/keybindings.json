@@ -1,0 +1,240 @@
+// Place your key bindings in this file to override the defaults
+[
+    // ==========================================
+    // JUPYTER NOTEBOOKS & NEOCIM CONFLICT FIXES
+    // ==========================================
+    {
+        "key": "j",
+        "command": "notebook.focusNextEditor",
+        "when": "editorTextFocus && inputFocus && neovim.mode == 'normal' && cursorAtBottom"
+    },
+    {
+        "key": "k",
+        "command": "notebook.focusPreviousEditor",
+        "when": "editorTextFocus && inputFocus && neovim.mode == 'normal' && cursorAtTop"
+    },
+    {
+        "key": "escape",
+        "command": "vscode-neovim.escape",
+        "when": "editorTextFocus && neovim.mode == 'insert'"
+    },
+    {
+        "key": "escape",
+        "command": "notebook.cell.quitEdit",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "shift+d",
+        "command": "notebook.cell.delete",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+        "key": "alt+i",
+        "command": "notebook.cell.edit"
+    },
+    {
+        "key": "shift+n",
+        "command": "notebook.cell.insertCodeCellBelow",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+        "key": "shift+alt+n",
+        "command": "notebook.cell.insertCodeCellAbove"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "notebook.clearAllCellsOutputs"
+    },
+    {
+        "key": "shift+c",
+        "command": "notebook.cell.clearOutputs",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+        "key": "shift+enter",
+        "command": "notebook.cell.executeAndSelectBelow",
+        "when": "!searchViewletFocus && !findInputFocussed && !notebookFindWidgetFocused"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "notebook.find",
+        "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+    },
+
+    // ==========================================
+    // EDITOR NAVIGATION & TEXT MANIPULATION
+    // ==========================================
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "workbench.action.previousEditorInGroup"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quit"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+down",
+        "command": "-editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+up",
+        "command": "-editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+n",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+alt+up",
+        "command": "-editor.action.copyLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+escape",
+        "command": "removeSecondaryCursors",
+        "when": "editorHasMultipleSelections && textInputFocus"
+    },
+    {
+        "key": "escape",
+        "command": "-removeSecondaryCursors",
+        "when": "editorHasMultipleSelections && textInputFocus"
+    },
+    {
+        "key": "alt+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+
+    // ==========================================
+    // WINDOW SPLITTING & UI MANAGEMENT
+    // ==========================================
+    {
+        "key": "ctrl+shift+d",
+        "command": "workbench.action.splitEditor"
+    },
+    {
+        "key": "ctrl+\\",
+        "command": "-workbench.action.splitEditor"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "ctrl+k ctrl+\\",
+        "command": "-workbench.action.splitEditorDown"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
+
+    // ==========================================
+    // SYSTEM & GLOBAL COMMAND PALETTE
+    // ==========================================
+    {
+        "key": "alt+x",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "workbench.action.openSettingsJson"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "-workbench.action.openSettings"
+    },
+    {
+        "key": "ctrl+shift+,",
+        "command": "workbench.action.openGlobalSettings"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.openGlobalKeybindings"
+    },
+    {
+        "key": "ctrl+k ctrl+s",
+        "command": "-workbench.action.openGlobalKeybindings"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "workbench.action.findInFiles"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "remoteTargets.focus"
+    },
+
+    // ==========================================
+    // TERMINAL & SEARCH
+    // ==========================================
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "Enter",
+        "command": "search.action.focusSearchList",
+        "when": "searchViewletVisible && searchViewletFocus && !inSearchList"
+    },
+    {
+        "key": "enter",
+        "command": "search.action.openResult",
+        "when": "listFocus && searchViewletVisible"
+    }
+]

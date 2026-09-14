@@ -1,0 +1,27 @@
+#                
+
+# Round
+format = """
+[ ](fg:white)\
+[*](fg:blue bg:none)\
+[ ](fg:white)\
+$cmd_duration\
+$directory\
+$git_branch\
+$git_status\
+"""
+
+add_newline = false
+
+[directory]
+style = "fg:240"
+format = "[$path]($style) "
+truncation_length = 6
+
+[git_branch]
+format = "[* ](fg:bright-black)[$branch](fg:cyan) "
+style = "plain"
+
+[git_status]
+style = "fg:gray"
+format = "([ \ueb4b $stash]($style))"

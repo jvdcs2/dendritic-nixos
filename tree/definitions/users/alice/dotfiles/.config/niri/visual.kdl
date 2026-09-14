@@ -1,0 +1,137 @@
+blur {
+    off
+    passes 4
+    // more passes = stronger blur (default: 3)
+    // offset 6.0
+    // sample distance per pass (default: 3.0)
+    noise 0.1
+    // grain overlay (default: 0.02)
+    saturation 2
+}
+animations {
+    // Uncomment to turn off all animations.
+    // You can also put "off" into each individual animation to disable it.
+    // off
+    // Slow down all animations by this factor. Values below 1 speed them up instead.
+    // slowdown 0.8
+    // Individual animations.
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
+    window-open {
+        duration-ms 150
+        curve "ease-out-expo"
+    }
+    window-close {
+        duration-ms 150
+        curve "ease-out-quad"
+    }
+    horizontal-view-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+    window-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+    window-resize {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+    config-notification-open-close {
+        spring damping-ratio=0.6 stiffness=1000 epsilon=0.001
+    }
+    exit-confirmation-open-close {
+        spring damping-ratio=0.6 stiffness=500 epsilon=0.01
+    }
+    screenshot-ui-open {
+        duration-ms 200
+        curve "ease-out-quad"
+    }
+    overview-open-close {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+    recent-windows-close {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.001
+    }
+}
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+cursor {
+    xcursor-size 6
+}
+output "eDP-1" {
+    // mode "1920x1080@120.000"
+    mode "2880x1800@120.000"
+    scale 2
+    transform "normal"
+}
+layout {
+    gaps 16
+    // gaps 0
+    always-center-single-column
+    center-focused-column "never"
+    default-column-display "tabbed" 
+    default-column-width {
+        proportion 0.5
+    }
+    insert-hint {
+        color "#86adcd"
+    }
+    tab-indicator {
+        width 6
+        place-within-column
+        gap 0
+        length total-proportion=0.5
+        position "bottom"
+        hide-when-single-tab
+        active-color "#86adcd"
+        corner-radius 4
+    }
+    preset-column-widths {
+        proportion 0.33333333
+        proportion 0.5
+        proportion 0.66666667
+    }
+    focus-ring {
+        inactive-color "#000000"
+        off
+        active-color "#000000"
+    }
+    border {
+        on
+        width 2
+        // active-color "#60967d"
+        active-color "#86adcd"
+        // active-color "#d1d1d1"
+        // active-color "#ffffff"
+        // active-color "#323231"
+        // on
+        inactive-color "#323231"
+        // inactive-color "#222221"
+        urgent-color "#86adcd"
+    }
+    shadow {
+        on
+        softness 26
+        spread 0
+        // softness 16
+        // spread 2
+        offset x=0 y=8
+        color "#000000dd"
+    }
+}
+recent-windows {
+    // off
+    open-delay-ms 0
+    debounce-ms 10000
+    highlight {
+        active-color "#ffffffaa"
+        urgent-color "#ffaaaaff"
+        padding 30
+        corner-radius 6
+    }
+    previews {
+        max-height 300
+        max-scale 0.7
+    }
+}

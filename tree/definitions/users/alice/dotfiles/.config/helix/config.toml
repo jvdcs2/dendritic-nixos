@@ -1,0 +1,127 @@
+theme = "Trasmus"
+# theme = "rose_pine"
+# theme = "ashen"
+
+[editor]
+end-of-line-diagnostics = "error"
+preview-completion-insert = true
+trim-final-newlines = true
+completion-trigger-len = 1
+completion-replace = true
+jump-label-alphabet = "asdcflkjnh"
+continue-comments = false
+line-number = "relative"
+completion-timeout = 5
+auto-completion = true
+bufferline = "always"
+popup-border = "all"
+auto-format = false
+color-modes = true
+cursorline = false
+true-color = true
+undercurl = true
+scrolloff = 12
+mouse = false
+
+[editor.file-picker]
+hidden = false
+git-ignore = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+character = "|"
+render = false
+skip-levels = 1
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+max-diagnostics = 5
+
+[editor.lsp]
+display-messages = true
+display-progress-messages = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.statusline]
+center = ["file-name"]
+left = ["mode", "spinner"]
+right = ["diagnostics", "position", "file-type"]
+
+[editor.statusline.mode]
+insert = "|  I  |"
+normal = "|  N  |"
+select = "|  S  |"
+
+[keys.insert]
+C-z = 'no_op'
+A-f = ["move_next_word_start"]
+A-b = ["move_prev_word_start"]
+C-f = ":format"
+
+[keys.normal]
+C-f = ":format"
+y = "yank_to_clipboard"
+# p = "paste_clipboard_after"
+# P = "paste_clipboard_before"
+#
+# A-N = ["search_selection", "extend_search_prev"]
+# A-n = ["search_selection", "extend_search_next"]
+A-W = ["move_next_long_word_start", "delete_selection"]
+A-w = ["move_prev_long_word_start", "delete_selection"]
+C-j = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before",
+]
+C-k = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+C-n = [
+  "save_selection",
+  "extend_to_line_bounds",
+  "yank",
+  "paste_before",
+  "jump_backward",
+]
+C-N = ["save_selection", "extend_to_line_bounds", "yank", "paste_before"]
+
+X = "select_line_above"
+c = "change_selection_noyank"
+d = "delete_selection_noyank"
+esc = ["collapse_selection", "keep_primary_selection"]
+
+# yazi tips
+C-space = ":sh tmux new-window -n 'hx:filepicker' '~/.config/helix/scripts/tmux-yazi-picker.sh \"%{buffer_name}\"'"
+# search dir
+# C-s = ":sh tmux new-window -n 'search' '~/.config/helix/scripts/search.sh'"
+C-s = ":write!"
+
+[keys.select]
+C-f = ":format"
+C-z = 'no_op'
+y = "yank_to_clipboard"
+# p = "paste_clipboard_after"
+# P = "paste_clipboard_before"
+#
+# A-N = ["search_selection", "extend_search_prev"]
+# A-n = ["search_selection", "extend_search_next"]
+
+[keys.normal.space.w]
+c = ":buffer-close"
+C = ":buffer-close!"
+Q = ":quit!"
+d = ":vsplit"
+
+[keys.normal.C-z]
+y = ["save_selection", "select_all", "yank_to_clipboard", "jump_backward"]
+d = ["select_all", "delete_selection"]

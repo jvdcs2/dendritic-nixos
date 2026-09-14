@@ -1,0 +1,195 @@
+# "$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+
+[mgr]
+cwd = { fg = "white" }
+hovered = { fg = "white", bg = "black" }
+preview_hovered = {}
+# Find
+find_keyword = { fg = "white", underline = true }
+find_position = { fg = "black", bg = "white" }
+# Marker
+marker_copied = { fg = "green", bg = "green" }
+marker_cut = { fg = "lightred", bg = "lightred" }
+marker_marked = { fg = "cyan", bg = "cyan" }
+marker_selected = { fg = "white", bg = "white" }
+# Count
+count_copied = { fg = "green" }
+count_cut = { fg = "lightred" }
+count_selected = { fg = "cyan" }
+# Border
+border_symbol = "│"
+border_style = { fg = "darkgray" }
+
+[tabs]
+active = { fg = "white", bg = "darkgray" }
+inactive = { fg = "darkgray", bg = "black" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+normal_main = { fg = "white", bg = "darkgray" }
+normal_alt = { fg = "darkgray", bg = "black" }
+select_main = { fg = "black", bg = "cyan" }
+select_alt = { fg = "cyan", bg = "black" }
+unset_main = { fg = "black", bg = "cyan" }
+unset_alt = { fg = "cyan", bg = "black" }
+
+
+[status]
+overall = { fg = "white" }
+perm_type = { fg = "lightblue" }
+perm_read = { fg = "yellow" }
+perm_write = { fg = "lightred" }
+perm_exec = { fg = "green" }
+perm_sep = { fg = "darkgray" }
+progress_label = { fg = "darkgray" }
+progress_normal = { fg = "cyan", bg = "cyan" }
+progress_error = { bg = "lightred" }
+
+[which]
+cols = 3
+mask = { bg = "black" }
+cand = { fg = "green" }
+rest = { fg = "green" }
+desc = { fg = "white" }
+border = { fg = "darkgray" }
+separator = "  "
+separator_style = { fg = "darkgray" }
+
+[confirm]
+border = { fg = "darkgray" }
+title = { fg = "white" }
+content = { fg = "white" }
+list = { fg = "white" }
+btn_yes = { fg = "green", bg = "black" }
+btn_no = { fg = "red", bg = "black" }
+
+[spot]
+border = { fg = "darkgray" }
+title = { fg = "white" }
+tbl_col = { fg = "darkgray" }
+tbl_cell = { bg = "black" }
+
+[notify]
+title_info = { fg = "lightblue" }
+title_warn = { fg = "yellow" }
+title_error = { fg = "lightred" }
+
+[pick]
+border = { fg = "darkgray" }
+active = { fg = "white" }
+inactive = { fg = "darkgray" }
+
+[input]
+border = { fg = "darkgray" }
+title = { fg = "white" }
+value = { fg = "white" }
+selected = { fg = "black", bg = "white" }
+
+[cmp]
+border = { fg = "darkgray" }
+active = { fg = "darkgray", bg = "black" }
+inactive = { fg = "darkgray" }
+
+[tasks]
+border = { fg = "darkgray" }
+title = { fg = "white" }
+hovered = { bg = "black" }
+
+[help]
+on = { fg = "lightblue" }
+run = { fg = "cyan" }
+desc = { fg = "darkgray" }
+hovered = { bg = "black" }
+footer = { fg = "white", bg = "black" }
+
+[filetype]
+rules = [
+	# --- Special states, checked first so they always win ---
+	{ url = "*", is = "orphan", fg = "red" },
+	{ url = "*", is = "exec", fg = "green", bold = true },
+ 
+	# --- Media (broad, by MIME) ---
+	{ mime = "image/*", fg = "magenta" },
+	{ mime = "video/*", fg = "yellow" },
+	{ mime = "audio/*", fg = "lightyellow" },
+ 
+	# --- Archives / compressed / packages ---
+	{ url = "*.{zip,rar,7z,gz,bz2,bz3,xz,zst,tar,tgz,txz,tbz,tbz2,lz,lz4,lzma,cab,iso,dmg,deb,rpm,apk,jar,war,whl}", fg = "red" },
+ 
+	# --- Documents ---
+	{ url = "*.{pdf,doc,docx,odt,rtf,epub,mobi}", fg = "cyan" },
+ 
+	# --- Spreadsheets / tabular data ---
+	{ url = "*.{xls,xlsx,ods,csv,tsv,parquet}", fg = "lightgreen" },
+ 
+	# --- Presentations ---
+	{ url = "*.{ppt,pptx,odp,key}", fg = "lightred" },
+ 
+	# --- Programming languages ---
+	{ url = "*.{rs,go,c,h,cpp,cc,hpp,cxx,py,pyi,rb,java,kt,kts,swift,cs,php,lua,pl,scala,hs,ex,exs,erl,clj,cljs,zig,nim,dart,jl,r,d,ml,mli,f90}", fg = "lightblue" },
+ 
+	# --- Web / frontend ---
+	{ url = "*.{js,mjs,cjs,jsx,ts,tsx,vue,svelte,astro,html,htm,css,scss,sass,less}", fg = "lightcyan" },
+ 
+	# --- Shell / scripting ---
+	{ url = "*.{sh,bash,zsh,fish,ps1,bat,cmd,awk}", fg = "green" },
+ 
+	# --- Config / data / markup ---
+	{ url = "*.{toml,yaml,yml,json,json5,jsonc,ini,conf,cfg,env,xml}", fg = "blue" },
+ 
+	# --- Docs-as-code / plain text ---
+	{ url = "*.{md,markdown,mdx,txt,rst,adoc,org,tex}", fg = "white" },
+ 
+	# --- Databases ---
+	{ url = "*.{db,sqlite,sqlite3,sql}", fg = "lightmagenta" },
+ 
+	# --- Fonts ---
+	{ url = "*.{ttf,otf,woff,woff2}", fg = "lightcyan" },
+ 
+	# --- Checksums / signatures / keys ---
+	{ url = "*.{lock,sha1,sha256,sha512,md5,sig,asc,pem,crt,key}", fg = "darkgray" },
+ 
+	# --- Logs / backups / caches / temp ---
+	{ url = "*.{log,bak,cache,tmp,swp}", fg = "darkgray" },
+ 
+	# --- Empty files ---
+	{ mime = "inode/empty", fg = "darkgray", bg = "black" },
+ 
+	# --- Fallback: any remaining file, then any directory ---
+	{ url = "*", fg = "white" },
+	{ url = "*/", fg = "blue" },
+]
+ 
+[icon]
+prepend_globs = [
+    # --- Media ---
+    { url = "*.{jpg,jpeg,png,gif,bmp,webp,svg,tiff,heic}", text = ""},
+    { url = "*.{mp4,mkv,avi,mov,webm,flv,wmv,m4v}", text = ""},
+    { url = "*.{mp3,flac,wav,ogg,m4a,aac}", text = "󰎆"},
+
+    # --- Archives ---
+    { url = "*.{zip,rar,7z,gz,bz2,xz,tar,iso,dmg,deb,rpm,apk}", text = ""},
+
+    # --- Documents & Data ---
+    { url = "*.pdf", text = ""},
+    { url = "*.{doc,docx,odt,rtf,epub,mobi}", text = "󰈙"},
+    { url = "*.{xls,xlsx,ods,csv,tsv,parquet}", text = "󰓏"},
+    { url = "*.{ppt,pptx,odp,key}", text = "󰐨"},
+
+    # --- Code & Scripts ---
+    { url = "*.{rs,go,c,cpp,py,rb,java,js,ts,html,css,sh,bash}", text = "󰅪"},
+    
+    # --- Config & Markup ---
+    { url = "*.{json,toml,yaml,yml,ini,conf,env,xml}", text = "󰒓"},
+
+    # --- Plain Text / Markdown ---
+    { url = "*.{md,markdown,txt,rst,org}", text = "󰈄"},
+
+    # --- Databases ---
+    { url = "*.{db,sqlite,sqlite3,sql}", text = ""},
+
+    # --- Fallbacks (Must stay at the absolute bottom) ---
+    { url = "*/", text = "󰉋"}, # All folders
+    { url = "*", text = "󰈔"}, # Any remaining unmapped file
+]

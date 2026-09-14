@@ -1,0 +1,6 @@
+[flavor]
+dark = "any"
+
+[indicator]
+current = { reversed = true }
+preview = { italic = true }

@@ -1,0 +1,25 @@
+#                
+
+right_format = """
+[$directory]()\
+[$nix_shell]()\
+"""
+
+add_newline = false
+
+[direnv]
+style = "fg:bright-black"
+format = " [$symbol]($style)"
+disabled = false
+
+[directory]
+style = "fg:240"
+format = "[$path]($style)"
+truncate_to_repo = false
+
+[nix_shell]
+disabled = false
+impure_msg = '[ ](bold red)'
+pure_msg = '[ ](bold green)'
+unknown_msg = '[ ](bold fg:bright-black)'
+format = ' [$state]()'

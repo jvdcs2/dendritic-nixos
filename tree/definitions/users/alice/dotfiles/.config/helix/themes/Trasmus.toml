@@ -1,0 +1,375 @@
+[special]
+fg = "green"
+modifiers = ["italic"]
+
+[palette]
+blue = "#86adcd"
+cyan = "#499294"
+green = "#60967d"
+yellow = "#ffc591"
+red = "#ff968c"
+magenta = "#de9bc8"
+fg = "#d1d1d1"
+bg = "#1a1a19"
+white = "#d1d1d1"
+black = "#323231"
+gray00 = "#181818"
+gray01 = "#222221"
+gray02 = "#2a2a29"
+gray03 = "#323231"
+gray04 = "#4b4b4a"
+gray05 = "#6c6c6a"
+gray06 = "#767675"
+
+[comment]
+fg = "gray04"
+modifiers = ["italic"]
+
+["comment.block"]
+fg = "gray04"
+modifiers = ["italic"]
+
+["comment.documentation"]
+fg = "gray04"
+modifiers = ["italic"]
+
+["comment.line"]
+fg = "gray04"
+modifiers = ["italic"]
+
+[constant]
+fg = "magenta"
+
+["constant.builtin"]
+fg = "magenta"
+
+["constant.builtin.boolean"]
+fg = "magenta"
+
+["constant.character"]
+fg = "magenta"
+
+["constant.character.escape"]
+fg = "magenta"
+
+["constant.numeric"]
+fg = "magenta"
+
+["constant.numeric.floats"]
+fg = "magenta"
+
+["constant.numeric.integer"]
+fg = "magenta"
+
+["diagnostic.error".underline]
+color = "red"
+style = "curl"
+
+["error"]
+fg = "red"
+modifiers = ["italic"]
+
+["info"]
+fg = "blue"
+modifiers = ["italic"]
+
+["hint"]
+fg = "green"
+modifiers = ["italic"]
+
+["warning"]
+fg = "yellow"
+modifiers = ["italic"]
+
+["diagnostic.unnecessary"]
+bg = "bg"
+fg = "fg"
+
+["diagnostic.unnecessary".underline]
+color = "yellow"
+
+[diff]
+fg = "fg"
+
+["diff.delta"]
+fg = "magenta"
+
+["diff.delta.conflict"]
+fg = "magenta"
+
+["diff.delta.gutter"]
+fg = "blue"
+
+["diff.delta.moved"]
+fg = "yellow"
+
+["diff.minus"]
+fg = "red"
+
+["diff.minus.gutter"]
+fg = "red"
+
+["diff.plus"]
+fg = "green"
+
+["diff.plus.gutter"]
+fg = "green"
+
+[function]
+fg = "green"
+
+["function.builtin"]
+fg = "green"
+modifiers = ["underlined"]
+
+["function.macro"]
+fg = "green"
+modifiers = ["italic"]
+
+["function.method"]
+fg = "green"
+modifiers = ["underlined"]
+
+["function.method.private"]
+fg = "green"
+modifiers = ["underlined"]
+
+["function.special"]
+fg = "green"
+modifiers = ["underlined"]
+
+[keyword]
+fg = "gray06"
+# modifiers = ["italic"]
+
+["keyword.control"]
+fg = "gray06"
+# modifiers = ["italic"]
+
+["keyword.control.conditional"]
+fg = "gray06"
+# modifiers = ["italic"]
+
+["keyword.control.exception"]
+fg = "gray06"
+# modifiers = ["italic"]
+
+["keyword.control.import"]
+fg = "gray06"
+# modifiers = ["italic"]
+
+["keyword.control.repeat"]
+fg = "gray06"
+# modifiers = ["italic"]
+
+["keyword.control.return"]
+fg = "gray06"
+# modifiers = ["italic"]
+
+["keyword.directive"]
+fg = "gray06"
+# modifiers = ["italic"]
+
+["keyword.function"]
+fg = "gray06"
+# modifiers = ["italic"]
+
+["keyword.operator"]
+fg = "gray06"
+# modifiers = ["italic"]
+
+["keyword.storage"]
+fg = "gray06"
+# modifiers = ["italic"]
+
+["keyword.storage.modifier"]
+fg = "gray06"
+# modifiers = ["italic"]
+
+["keyword.storage.type"]
+fg = "gray06"
+# modifiers = ["italic"]
+
+[namespace]
+fg = "fg"
+modifiers = ["underlined"]
+
+[operator]
+fg = "gray06"
+modifiers = ["italic"]
+
+[punctuation]
+fg = "gray04"
+
+["punctuation.bracket"]
+fg = "gray04"
+
+["punctuation.delimiter"]
+fg = "fg"
+
+["punctuation.special"]
+fg = "fg"
+
+[string]
+fg = "cyan"
+modifiers = ["italic"]
+
+["string.regexp"]
+fg = "blue"
+
+["string.special"]
+fg = "blue"
+
+["string.special.path"]
+fg = "blue"
+
+["string.special.symbol"]
+fg = "blue"
+
+["string.special.url"]
+fg = "blue"
+
+[type]
+fg = "blue"
+
+["type.builtin"]
+fg = "blue"
+
+["type.enum"]
+fg = "blue"
+
+["type.enum.variant"]
+fg = "blue"
+
+["type.parameter"]
+fg = "blue"
+["ui.background"]
+fg = "gray03"
+["ui.background.separator"]
+fg = "gray03"
+["ui.bufferline"]
+bg = ""
+["ui.bufferline.active"]
+fg = "fg"
+bg = "gray02"
+["ui.bufferline.background"]
+fg = "gray04"
+["ui.cursor"]
+bg = ""
+fg = "blue"
+["ui.cursor.insert"]
+bg = "green"
+fg = "white"
+["ui.cursor.match"]
+bg = "gray04"
+fg = "white"
+["ui.cursor.normal"]
+bg = "blue"
+fg = "white"
+["ui.cursor.primary"]
+bg = "white"
+fg = "black"
+["ui.cursor.primary.insert"]
+bg = "white"
+fg = "black"
+["ui.cursor.primary.normal"]
+bg = "white"
+fg = "black"
+["ui.cursor.primary.select"]
+bg = "white"
+fg = "black"
+["ui.cursor.select"]
+bg = "green"
+fg = "blue"
+["ui.debug.active"]
+fg = "magenta"
+["ui.debug.breakpoint"]
+fg = "magenta"
+["ui.highlight"]
+bg = "gray01"
+fg = "fg"
+["ui.linenr"]
+fg = "gray03"
+["ui.linenr.selected"]
+fg = "fg"
+["ui.popup"]
+fg = "gray04"
+["ui.popup.info"]
+fg = "gray03"
+
+# ["ui.picker.header"]
+["ui.picker.header.column"]
+fg = "green"
+["ui.picker.header.column.active"]
+fg = "white"
+
+["ui.selection"]
+bg = "gray03"
+fg = "white"
+
+["ui.statusline"]
+fg = "fg"
+bg = "gray02"
+["ui.statusline.inactive"]
+fg = "gray05"
+bg = "gray01"
+["ui.statusline.insert"]
+bg = "green"
+fg = "black"
+["ui.statusline.normal"]
+bg = ""
+fg = "fg"
+["ui.statusline.select"]
+bg = "blue"
+fg = "black"
+
+["ui.virtual.jump-label"]
+fg = "white"
+underline = { color = "white", style = "line" }
+modifiers = ["italic"]
+
+["ui.text.directory"]
+fg = "gray05"
+
+["ui.window"]
+fg = "gray03"
+["ui.help"]
+fg = "green"
+["ui.text"]
+fg = "fg"
+["ui.text.focus"]
+fg = "blue"
+["ui.text.inactive"]
+fg = "gray06"
+["ui.text.info"]
+fg = "fg"
+
+["ui.menu"]
+fg = "fg"
+["ui.menu.selected"]
+bg = "fg"
+fg = "bg"
+["ui.menu.scroll"]
+fg = "gray04"
+
+[variable]
+fg = "fg"
+
+["variable.builtin"]
+fg = "blue"
+modifiers = ["italic"]
+
+["variable.other"]
+fg = "blue"
+modifiers = ["underlined"]
+
+["variable.other.member"]
+fg = "blue"
+
+["variable.other.member.private"]
+fg = "fg"
+modifiers = ["underlined"]
+
+["variable.parameter"]
+fg = "fg"
+modifiers = ["italic"]

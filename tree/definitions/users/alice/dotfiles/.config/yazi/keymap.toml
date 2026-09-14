@@ -1,0 +1,95 @@
+[mgr]
+prepend_keymap = [
+  # DISABLED
+  { on = [
+    "t",
+  ], run = "noop" },
+  { on = [
+    "Q",
+  ], run = "noop" },
+  { on = [
+    "<C-r>",
+  ], run = "noop" },
+
+  # GOTO
+  { on = [
+    "g",
+    "n",
+  ], run = "cd /etc/nixos", desc = "/etc/nixos" },
+  { on = [
+    "g",
+    "C",
+  ], run = "cd /etc/nixos/tree/definitions/users/alice/dotfiles/.config", desc = "/etc/nixos/tree/definitions/users/alice/dotfiles/.config" },
+  { on = [
+    "g",
+    "s",
+  ], run = "cd ~/syncthing/school", desc = "~/syncthing/school" },
+  { on = [
+    "g",
+    "b",
+  ], run = "cd ~/sandbox", desc = "~/sandbox" },
+
+  # MY DEFAULTS
+  { on = [ "<Tab>" ], run = "back",    desc = "Go back to previous directory" },
+  { on = [ "<C-i>" ], run = "back",    desc = "Go back to previous directory" },
+  { on = "<Esc>", run = "escape", desc = "Exit visual mode, clear selected, or cancel search" },
+  { on = [ "<C-o>" ], run = "forward", desc = "Go forward to next directory" },
+  { on = [
+    "q",
+  ], run = "tab_switch --relative -1", desc = "previous tab" },
+  { on = [
+    "<C-Space>",
+  ], run = "quit", desc = "quit" },
+  { on = [
+    "e",
+  ], run = "tab_switch --relative 1", desc = "next tab" },
+  { on = [
+    "<A-n>",
+  ], run = "tab_create --current", desc = "create tab" },
+  { on = [
+    "L",
+  ], run = "open --interactive", desc = "open selected files interactively" },
+  { on = [
+    "<A-c>",
+  ], run = "close", desc = "close tab" },
+
+  # === PLUGINS ===
+
+  # SMART-ENTER
+  { on = "l", run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
+
+  # TOGGLE-PANE
+  { on = [
+    "P",
+    "h",
+  ], run = "plugin toggle-pane min-preview", desc = "Show/Hide the preview pane" },
+  { on = [
+    "P",
+    "s",
+  ], run = "plugin toggle-pane max-preview", desc = "Maximize/Minimize preview pane" },
+
+  # MOUNT
+  { on = "M", run = "plugin mount" },
+
+  # SMART-FILTER
+  { on = "F", run = "plugin smart-filter", desc = "Smart filter" },
+
+  # RESTORE
+  { on = "u", run = "plugin restore", desc = "Restore last deleted files/folders" },
+
+  # SUDO
+  { on = [
+    "<C-s>",
+    "d",
+  ], run = "plugin sudo -- remove", desc = "sudo trash" },
+  { on = [
+    "<C-s>",
+    "D",
+  ], run = "plugin sudo -- remove --permanently", desc = "sudo delete" },
+
+  # CMHOD
+  { on = [
+    "c",
+    "m",
+  ], run = "plugin chmod", desc = "chmod selected" },
+]

@@ -1,0 +1,499 @@
+{
+  "jupyter.runStartupCommands": [
+    "import matplotlib.pyplot as plt",
+    "plt.rcParams['figure.figsize'] = [6, 3.5]",
+    "plt.rcParams.update({'font.family': 'serif', 'font.serif': ['cmr10'], 'axes.formatter.use_mathtext': True})",
+    "%config InlineBackend.figure_format = 'retina'",
+    "plt.rcParams['mathtext.fontset'] = 'cm'"
+  ],
+  // --------------------------------------------------------------------------
+  // FONTS
+  // --------------------------------------------------------------------------
+  "chat.editor.fontFamily": "JetBrainsMono Nerd Font",
+  "chat.editor.fontSize": 14.0,
+  "chat.fontFamily": "DeepMind Sans Medium",
+  "debug.console.fontFamily": "JetBrainsMono Nerd Font",
+  "debug.console.fontSize": 14.0,
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontSize": 14.0,
+  "editor.inlayHints.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.inlineSuggest.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.minimap.sectionHeaderFontSize": 10.285714285714286,
+  "markdown.preview.fontFamily": "DeepMind Sans Medium",
+  "markdown.preview.fontSize": 14.0,
+  "notebook.markup.fontFamily": "DeepMind Sans Medium",
+  "scm.inputFontFamily": "JetBrainsMono Nerd Font",
+  "scm.inputFontSize": 14.857142857142858,
+  "screencastMode.fontSize": 64.0,
+  "terminal.integrated.fontSize": 14.0,
+  // --------------------------------------------------------------------------
+  // WORKBENCH / UI
+  // --------------------------------------------------------------------------
+  //   "workbench.colorTheme": "my-stylix",
+  "window.menuBarVisibility": "toggle",
+  "window.commandCenter": false,
+  "window.titleBarStyle": "custom",
+  "workbench.layoutControl.enabled": false,
+  "workbench.startupEditor": "terminal",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.sideBar.location": "right",
+  "workbench.list.smoothScrolling": false,
+  "workbench.editor.titleScrollbarVisibility": "hidden",
+  "chat.commandCenter.enabled": false,
+  "update.mode": "none",
+  // --------------------------------------------------------------------------
+  // EDITOR CORE
+  // --------------------------------------------------------------------------
+  "breadcrumbs.enabled": false,
+  "editor.renderLineHighlight": "none",
+  // SCROLLBARS: Hidden completely to remove the vertical line they represent
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  // MINIMAP: Kept enabled as requested
+  "editor.minimap.enabled": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": false,
+  "editor.guides.indentation": false,
+  "editor.hover.delay": 100,
+  "editor.hover.hidingDelay": 0,
+  "editor.inlineSuggest.edits.allowCodeShifting": "never",
+  "editor.inlineSuggest.edits.renderSideBySide": "never",
+  "editor.inlineSuggest.enabled": false,
+  "editor.occurrencesHighlight": "off",
+  "editor.selectionHighlight": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSurroundingLines": 8,
+  "editor.cursorSurroundingLinesStyle": "all",
+  // "editor.cursorSmoothCaretAnimation": "on",
+  "editor.stickyScroll.scrollWithEditor": false,
+  "editor.wordWrap": "on",
+  // --------------------------------------------------------------------------
+  // VIM
+  // --------------------------------------------------------------------------
+  "vim.leader": "<space>",
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.replace": "block-outline",
+  "vim.cursorStylePerMode.visual": "underline",
+  "vim.cursorStylePerMode.visualblock": "underline",
+  "vim.cursorStylePerMode.visualline": "underline",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<A-o>"],
+      "after": ["%", "v", "i", "("]
+    },
+    { "before": ["j"], "after": ["g", "j"] },
+    { "before": ["k"], "after": ["g", "k"] },
+    { "before": ["<tab>"], "after": ["e"] },
+    {
+      "before": ["<leader>", "k"],
+      "commands": ["editor.action.showHover"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["j"], "after": ["g", "j"] },
+    { "before": ["k"], "after": ["g", "k"] },
+    { "before": ["<tab>"], "after": ["e"] }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["U"],
+      "after": [] // or some harmless no-op / custom mapping
+    }
+  ],
+  // --------------------------------------------------------------------------
+  // TERMINAL
+  // --------------------------------------------------------------------------
+  "terminal.integrated.smoothScrolling": false,
+  // --------------------------------------------------------------------------
+  // NOTEBOOK
+  // --------------------------------------------------------------------------
+  "notebook.lineNumbers": "on",
+  "notebook.cellToolbarLocation": {
+    "default": "hidden",
+    "jupyter-notebook": "hidden"
+  },
+  "notebook.insertToolbarLocation": "hidden",
+  "notebook.showCellStatusBar": "hidden",
+  "notebook.consolidatedOutputButton": true,
+  "notebook.scrolling.revealNextCellOnExecute": "firstLine",
+  "notebook.output.scrolling": true,
+  // --------------------------------------------------------------------------
+  // EXPLORER
+  // --------------------------------------------------------------------------
+  "explorer.confirmDragAndDrop": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  // --------------------------------------------------------------------------
+  // MISC (Git, Python, Jupyter, Security)
+  // --------------------------------------------------------------------------
+  "git.openRepositoryInParentFolders": "never",
+  "python.defaultInterpreterPath": "/home/alice/sandbox/__python__/neural/.venv",
+  "jupyter.askForKernelRestart": false,
+  "output.smartScroll.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  // --------------------------------------------------------------------------
+  // COLOR CUSTOMIZATIONS: THE ULTIMATE LINE KILLER SECTION
+  // --------------------------------------------------------------------------
+  "workbench.colorCustomizations": {
+    // -------------------------------------------------------------
+    // ⭐ TERMINAL OVERRIDES (Matches Editor Theme) ⭐
+    // -------------------------------------------------------------
+    "terminal.background": "#1a1a19",
+    "terminal.foreground": "#d1d1d1",
+    "terminalCursor.foreground": "#d1d1d1",
+    "terminalCursor.background": "#d1d1d1",
+    "terminal.selectionBackground": "#4b4b4a50",
+    // ANSI COLORS (Mapped to your Token Colors)
+    "terminal.ansiBlack": "#2a2a29", // Background
+    "terminal.ansiBrightBlack": "#4b4b4a", // Comments / Muted
+    "terminal.ansiRed": "#ff968c", // Error / Invalid
+    "terminal.ansiBrightRed": "#ff968c",
+    "terminal.ansiGreen": "#60967d", // Functions / Strings
+    "terminal.ansiBrightGreen": "#72a68c", // Hover state green
+    "terminal.ansiYellow": "#ffc591", // Warnings
+    "terminal.ansiBrightYellow": "#ffc591",
+    "terminal.ansiBlue": "#86adcd", // Variables / Links
+    "terminal.ansiBrightBlue": "#a4c3e8", // Active Links
+    "terminal.ansiMagenta": "#de9bc8", // Constants / Keywords
+    "terminal.ansiBrightMagenta": "#c586c0",
+    "terminal.ansiCyan": "#499294", // Strings
+    "terminal.ansiBrightCyan": "#499294",
+    "terminal.ansiWhite": "#d1d1d1", // Standard Text
+    "terminal.ansiBrightWhite": "#ffffff",
+    "editorBracketMatch.border": "#00000000",
+    "editorBracketMatch.background": "#00000000",
+    "editor.findMatchBackground": "#4b4b4a50",
+    "editor.findMatchHighlightBackground": "#4b4b4a30",
+    "editor.findRangeHighlightBackground": "#4b4b4a30",
+    "editorOverviewRuler.findMatchForeground": "#4b4b4a30",
+    "minimap.findMatchHighlight": "#4b4b4a30",
+    // 💀 NUCLEAR BORDERS (All known persistent dividers set to #00000000) 💀
+    "contrastBorder": "#00000000",
+    "focusBorder": "#00000000",
+    "widget.shadow": "#00000000",
+    "scrollbar.shadow": "#00000000",
+    "sash.hoverBorder": "#00000000",
+    "editorOverviewRuler.border": "#00000000",
+    "editor.minimap.overviewRulerBorder": "#00000000",
+    "minimapSlider.background": "#00000000",
+    "minimapSlider.hoverBackground": "#00000000",
+    "minimapSlider.activeBackground": "#00000000",
+    "window.activeBorder": "#00000000",
+    "window.inactiveBorder": "#00000000",
+    "statusBar.border": "#00000000",
+    "titleBar.border": "#00000000",
+    "activityBar.border": "#00000000",
+    "sideBar.border": "#00000000",
+    "sideBarSectionHeader.border": "#00000000",
+    "panel.border": "#00000000",
+    "panelSection.border": "#00000000",
+    "terminal.border": "#00000000",
+    "editorGroup.border": "#00000000",
+    "editorGroupHeader.border": "#00000000",
+    "editor.border": "#00000000",
+    "editorGroup.dropBackground": "#00000000",
+    "editorGroup.dropIntoPromptBorder": "#00000000",
+    "diffEditor.border": "#00000000",
+    "tab.border": "#00000000",
+    "tab.lastPinnedBorder": "#00000000",
+    "peekView.border": "#00000000",
+    "editorSuggestWidget.border": "#00000000",
+    "menu.border": "#00000000",
+    "menu.separatorBackground": "#00000000",
+    "pickerGroup.border": "#00000000",
+    "input.border": "#00000000",
+    "dropdown.border": "#00000000",
+    "checkbox.border": "#00000000",
+    "button.border": "#00000000",
+    "tree.indentGuidesStroke": "#00000000",
+    "editorStickyScroll.border": "#00000000",
+    // -------------------------------------------------------------
+    // ⭐ FINAL AGGRESSIVE ACCENT COLOR OVERRIDES (For the stubborn blue) ⭐
+    "statusBar.debuggingBackground": "#86adcd",
+    "badge.background": "#86adcd", // Kills the default blue notification circle
+    "badge.foreground": "#1a1a19",
+    "progressBar.background": "#86adcd", // Kills the default blue progress bar
+    "inputValidation.infoBackground": "#222221", // Kills blue info messages background
+    "inputValidation.infoBorder": "#86adcd", // Sets the border of info messages to your blue
+    "statusBarItem.activeBackground": "#323231", // Controls the active item background (often blue)
+    // ⭐ GLOBAL ACCENT & LINK FIXES (From previous step) ⭐
+    "textLink.foreground": "#86adcd",
+    "textLink.activeForeground": "#a4c3e8",
+    "button.background": "#86adcd",
+    "button.foreground": "#1a1a19",
+    "button.hoverBackground": "#a4c3e8",
+    // ⭐ STATUS BAR / REMOTE ACCENT FIXES (From previous step) ⭐
+    "statusBarItem.remoteBackground": "#60967d",
+    "statusBarItem.remoteForeground": "#1a1a19",
+    "statusBarItem.remoteHoverBackground": "#72a68c",
+    "statusBarItem.prominentBackground": "#60967d",
+    "statusBarItem.prominentForeground": "#1a1a19",
+    "statusBarItem.prominentHoverBackground": "#72a68c",
+    // --- YOUR EXISTING COLORS BELOW ---
+    "foreground": "#d1d1d1",
+    "editor.foreground": "#d1d1d1",
+    "editor.background": "#1a1a19",
+    "editor.selectionBackground": "#4b4b4a50",
+    "editor.selectionHighlightBackground": "#4b4b4a50",
+    "editor.lineHighlightBackground": "#222221",
+    "editor.lineHighlightBorder": "#86adcd",
+    "editorWhitespace.foreground": "#4b4b4a",
+    "editorIndentGuide.background1": "#00000000",
+    "editorIndentGuide.activeBackground1": "#00000000",
+    "editorCursor.foreground": "#d1d1d1",
+    "editorCursor.background": "#000000",
+    "editor.wordHighlightBackground": "#ffffff22",
+    "activityBar.background": "#2a2a29",
+    "activityBar.foreground": "#d1d1d1",
+    "activityBar.inactiveForeground": "#6c6c6a",
+    "sideBar.background": "#222221",
+    "sideBar.foreground": "#d1d1d1",
+    "sideBarSectionHeader.background": "#2a2a29",
+    "list.hoverBackground": "#2a2a29",
+    "list.inactiveSelectionBackground": "#2a2a29",
+    "list.activeSelectionBackground": "#323231",
+    "list.focusBackground": "#323231",
+    "list.highlightForeground": "#60967d",
+    "statusBar.background": "#222221",
+    "statusBar.foreground": "#d1d1d1",
+    "statusBar.noFolderBackground": "#222221",
+    "editorGroupHeader.tabsBackground": "#1a1a19",
+    "tab.inactiveBackground": "#1a1a19",
+    "tab.inactiveForeground": "#767675",
+    "tab.activeBackground": "#222221",
+    "tab.activeForeground": "#d1d1d1",
+    "titleBar.activeBackground": "#222221",
+    "titleBar.activeForeground": "#d1d1d1",
+    "titleBar.inactiveBackground": "#1a1a19",
+    "titleBar.inactiveForeground": "#767675",
+    "editorError.foreground": "#ff968c",
+    "editorWarning.foreground": "#ffc591",
+    "editorInfo.foreground": "#86adcd",
+    "editorHint.foreground": "#60967d",
+    "editorGutter.modifiedBackground": "#de9bc8",
+    "editorGutter.addedBackground": "#60967d",
+    "editorGutter.deletedBackground": "#ff968c",
+    "editorLineNumber.foreground": "#323231",
+    "editorLineNumber.activeForeground": "#d1d1d1",
+    "menu.background": "#222221",
+    "menu.foreground": "#d1d1d1",
+    "menu.selectionBackground": "#d1d1d1",
+    "menu.selectionForeground": "#1a1a19",
+    "peekViewEditor.background": "#222221",
+    "peekViewResult.background": "#1a1a19",
+    "peekViewTitle.background": "#2a2a29",
+    "diffEditor.insertedTextBackground": "#60967d20",
+    "diffEditor.removedTextBackground": "#ff968c20",
+    "editorBracketHighlight.foreground0": "#ffffff",
+    "editorBracketHighlight.foreground1": "#6c6c6a",
+    "editorBracketHighlight.foreground2": "#4b4b4a",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff967c",
+    "notebook.focusedCellBorder": "#86adcd", // border when cell is focused
+    "notebook.selectedCellBorder": "#86adcd", // border for selected cell
+    "notebook.focusedCellBackground": "#00000000", // optional: keep background transparent
+    "notebook.selectedCellBackground": "#00000000" // optional: no fill
+  },
+  // --------------------------------------------------------------------------
+  // TOKEN CUSTOMIZATIONS (Your existing syntax rules)
+  // --------------------------------------------------------------------------
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "punctuation.definition.comment"
+        ],
+        "settings": {
+          "foreground": "#4b4b4a",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "string",
+          "punctuation.definition.string"
+        ],
+        "settings": {
+          "foreground": "#499294",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "string.regexp",
+          "string.special",
+          "string.other.link"
+        ],
+        "settings": {
+          "foreground": "#86adcd",
+          "fontStyle": ""
+        }
+      },
+      {
+        "scope": [
+          "constant",
+          "support.constant"
+        ],
+        "settings": {
+          "foreground": "#de9bc8"
+        }
+      },
+      {
+        "scope": [
+          "keyword",
+          "storage.type",
+          "storage.modifier",
+          "punctuation.definition.keyword"
+        ],
+        "settings": {
+          "foreground": "#767675"
+        }
+      },
+      {
+        "scope": [
+          "keyword.operator",
+          "punctuation.separator",
+          "punctuation.terminator"
+        ],
+        "settings": {
+          "foreground": "#767675",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "punctuation.definition.template-expression",
+        "settings": {
+          "foreground": "#c586c0"
+        }
+      },
+      {
+        "scope": [
+          "punctuation.section",
+          "punctuation.accessor"
+        ],
+        "settings": {
+          "foreground": "#d1d1d1"
+        }
+      },
+      {
+        "scope": [
+          "punctuation.bracket",
+          "meta.brace",
+          "punctuation.definition.parameters",
+          "punctuation.definition.block"
+        ],
+        "settings": {
+          "foreground": "#4b4b4a"
+        }
+      },
+      {
+        "scope": [
+          "entity.name.function",
+          "support.function",
+          "meta.function-call"
+        ],
+        "settings": {
+          "foreground": "#60967d"
+        }
+      },
+      {
+        "scope": "entity.name.function.special",
+        "settings": {
+          "fontStyle": "underline"
+        }
+      },
+      {
+        "scope": "support.function.macro",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "variable",
+          "meta.definition.variable"
+        ],
+        "settings": {
+          "foreground": "#d1d1d1"
+        }
+      },
+      {
+        "scope": "variable.parameter",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "variable.language.this",
+          "variable.other.object.property",
+          "variable.other.property",
+          "support.variable.property",
+          "variable.other.enummember"
+        ],
+        "settings": {
+          "foreground": "#86adcd"
+        }
+      },
+      {
+        "scope": "variable.other.builtin",
+        "settings": {
+          "foreground": "#86adcd",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "entity.name.type",
+          "entity.name.class",
+          "entity.name.namespace",
+          "entity.name.scope-resolution",
+          "support.type",
+          "support.class"
+        ],
+        "settings": {
+          "foreground": "#86adcd"
+        }
+      },
+      {
+        "scope": [
+          "invalid",
+          "invalid.illegal"
+        ],
+        "settings": {
+          "foreground": "#ff968c",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "emphasis",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "strong",
+        "settings": {
+          "fontStyle": "bold"
+        }
+      }
+    ]
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "explorer.confirmDelete": false
+}

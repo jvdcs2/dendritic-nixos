@@ -1,0 +1,46 @@
+#                
+
+# Round
+format = """
+[](fg:bright-black)\
+[ ](fg:white bg:bright-black)\
+[ ](fg:bright-black)\
+$cmd_duration\
+$directory\
+$git_branch\
+$git_status\
+$env_var
+\
+[ ╰─](fg:bright-black)\
+[$character]()
+"""
+
+add_newline = false
+
+[directory]
+style = "fg:blue"
+format = "[$path]($style) "
+truncation_length = 2
+truncate_to_repo = true
+
+[git_branch]
+format = "[* ](fg:240)[$branch](fg:cyan) "
+style = "plain"
+
+[git_status]
+style = "fg:240"
+format = "([ \ueb4b $stash]($style))"
+
+[env_var.OLDPWD]
+format = "[](fg:bright-black) "
+variable = "OLDPWD"
+default = ""
+
+[character]
+success_symbol = "[λ](bold fg:white)"
+error_symbol = "[λ](bold fg:red)"
+
+[cmd_duration]
+disabled = false
+min_time = 900
+format = "[$duration](fg:green) "

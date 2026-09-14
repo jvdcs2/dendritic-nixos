@@ -1,0 +1,4 @@
+// https://docs.vicinae.com/quickstart/niri
+debug {
+	honor-xdg-activation-with-invalid-serial
+}

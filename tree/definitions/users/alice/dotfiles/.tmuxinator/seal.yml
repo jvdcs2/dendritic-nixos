@@ -1,0 +1,6 @@
+name: seal
+root: ~/sandbox/seal
+windows:
+  - FILES: y
+  - EDIT: hx ./
+  - RUN:

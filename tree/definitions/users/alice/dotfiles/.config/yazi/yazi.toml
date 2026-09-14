@@ -1,0 +1,64 @@
+[mgr]
+sort_by = "mtime"
+sort_reverse = true
+
+sort_dir_first = true
+show_hidden = false
+ratio = [1, 3, 3]
+linemode = "mtime" 
+# linemode = "size_and_mtime" # WARN: relies on init.lua
+
+[preview]
+image_delay = 20
+
+[opener]
+pdf_viewer = [
+  { run = 'sioyek --new-instance %s', block = false, desc = "Sioyek", for = "unix", orphan = true },
+  { run = 'onlyoffice-desktopeditors %s', block = false, desc = "Onlyoffice", for = "unix" },
+  { run = 'zotero %s', block = false, desc = "Zotero", for = "unix" },
+  { run = 'zen %s', block = false, desc = "Zen", for = "unix" },
+]
+image_viewer = [
+  { run = "sh -c 'swayimg \"$1\" \"$2\"/*' -- %s1 %d1", block = false, desc = "Swayimg", for = "unix", orphan = true },
+  { run = 'zen %s', block = false, desc = "Zen", for = "unix" },
+  { run = 'pinta %s', block = false, desc = "Pinta", for = "unix" },
+  { run = 'aseprite %s', block = false, desc = "Aseprite", for = "unix" },
+]
+media_viewer = [
+  { run = 'mpv %s', block = false, desc = "Mpv", for = "unix", orphan = true },
+  { run = 'zen %s', block = false, desc = "Zen", for = "unix" },
+]
+edit = [
+  { run = 'nvim %s', block = true, desc = "Neovim", for = "unix" },
+  # { run = 'hx %s', block = true, desc = "Helix", for = "unix" },
+  # { run = 'zen %s', block = false, desc = "Zen", for = "unix" },
+  { run = 'code %s', block = false, desc = "Vscode", for = "unix", orphan = true },
+  # { run = 'emacsclient -c %s', block = false, desc = "Emacs", for = "unix", orphan = true },
+  # { run = "sh -c 'swayimg \"$2\" \"$2\"/*' -- %s1 %d1", block = false, desc = "Swayimg", for = "unix", orphan = true },
+]
+
+[open]
+prepend_rules = [
+  { mime = "application/pdf", use = "pdf_viewer" },
+  { mime = "application/epub+zip", use = "pdf_viewer" },
+  { url = "*.epub", use = "pdf_viewer" },
+
+  { mime = "image/*", use = "image_viewer" },
+  { mime = "video/*", use = "media_viewer" },
+  { mime = "audio/*", use = "media_viewer" },
+]
+
+[plugin]
+prepend_preloaders = [
+  { mime = "{audio,video,image}/*", run = "mediainfo" },
+  { mime = "application/subrip", run = "mediainfo" },
+  { mime = "application/postscript", run = "mediainfo" },
+]
+prepend_previewers = [
+  { mime = "{audio,video,image}/*", run = "mediainfo" },
+  { mime = "application/subrip", run = "mediainfo" },
+  { mime = "application/postscript", run = "mediainfo" },
+]
+
+[tasks]
+image_alloc = 1073741824 # = 1024*1024*1024 = 1024MB

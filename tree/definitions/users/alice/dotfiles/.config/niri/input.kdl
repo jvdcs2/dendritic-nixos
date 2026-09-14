@@ -1,0 +1,26 @@
+input {
+    warp-mouse-to-focus mode="center-xy-always"
+    keyboard {
+        repeat-delay 180
+        repeat-rate 60
+    }
+    touchpad {
+        // disabled-on-external-mouse
+        // drag false
+        // drag-lock
+        // dwtp
+        // dwt
+        tap
+        natural-scroll
+        accel-speed 0.6
+        accel-profile "adaptive"
+        scroll-method "two-finger"
+    }
+    mouse {
+        // scroll-method "no-scroll"
+        // natural-scroll
+        // off
+        accel-speed 0.4
+        accel-profile "flat"
+    }
+}
