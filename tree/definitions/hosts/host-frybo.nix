@@ -62,6 +62,7 @@
       feature-crabHole
       feature-flatpak
       feature-keyd
+      feature-scrcpy
       # feature-aria
       # feature-vsts
 
