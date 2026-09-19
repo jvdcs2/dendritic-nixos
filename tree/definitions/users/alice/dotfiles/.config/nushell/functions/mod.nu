@@ -1,4 +1,4 @@
-export def dr [] {
+export def reset_emacs [] {
   let answer = (input "Remove ~/.emacs.d and reinstall Doom Emacs? (y/N): ")
   if ($answer | str trim | str downcase) == "y" {
     rm -r ~/.emacs.d
@@ -44,16 +44,10 @@ export def e [] {
   z $here
 }
 
+export def conv [file: path, to = "pdf"] { with-env {SAL_LOG: "-WARN"} { unoconv -f $to $file } }
+
 export def die [] {
   tmux kill-server
-}
-
-export def h [] {
-  man home-configuration.nix
-}
-
-export def c [] {
-  man configuration.nix
 }
 
 export def d [] {

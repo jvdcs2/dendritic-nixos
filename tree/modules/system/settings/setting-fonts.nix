@@ -11,6 +11,10 @@
         with pkgs; [
           # serif
           texlivePackages.eczar
+          texlivePackages.lete-sans-math
+          texlivePackages.luciole
+          texlivePackages.gillius
+
           cm_unicode
           ibm-plex
           # sans serif
@@ -24,6 +28,13 @@
           nerd-fonts.symbols-only
           nerd-fonts.geist-mono
           iosevka-comfy.comfy
+
+          # nice round ones
+          rubik
+          nunito
+          poppins
+          comfortaa
+
           # foreign script fallback
           noto-fonts-cjk-sans
           noto-fonts-color-emoji

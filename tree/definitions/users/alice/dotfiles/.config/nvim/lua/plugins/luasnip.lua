@@ -85,28 +85,29 @@ ls.add_snippets("typst", {
 	ts("aa", fmta("$<>$", { i(1) })),
 	ts("bb", fmta("*<>*", { i(1) })),
 	ms("ee", fmta("_<>_<>", { i(1), i(0) })),
-
-	-- Logic
-	ms("=v", t("arrow.b.double ")),
-	ms("===", t("equiv")),
-	ms("fa", t("forall")),
-	ms("te", t("exists")),
-	ms("sor", t("union")),
-	ms("sand", t("inter")),
+	ms("(", fmta("(<>)<>", { i(1), i(0) })),
 
 	-- Operators
 	ms("+-", t("plus.minus")),
 	ms("-+", t("plus.minus")),
 	ms("^", fmta("^(<>)<>", { i(1), i(0) })),
 	ms("_", fmta("_(<>)<>", { i(1), i(0) })),
+	ms(".frac", fmta("frac(<>, <>)<>", { i(1, "a"), i(2, "b"), i(0) })),
 
-	ms("//", fmta("frac(<>, <>)<>", { i(1, "a"), i(2, "b"), i(0) })),
+	-- Logic
+	ms(".=v", t("arrow.b.double ")),
+	ms(".===", t("equiv")),
+	ms(".fa", t("forall")),
+	ms(".iff", t("<==>")),
+	ms(".te", t("exists")),
+	ms(".sor", t("union")),
+	ms(".sand", t("inter")),
 
 	-- Calculus
-	ms("lim", fmta("lim_(<> ->> <>) <>", { i(1, "n"), i(2, "oo"), i(0) })),
-	ms("sum", fmta("sum_(<>=<>)^<> <>", { i(1, "n"), i(2, "1"), i(3, "oo"), i(0) })),
-	ms("prod", fmta("product_(<>=<>)^<> <>", { i(1, "n"), i(2, "1"), i(3, "oo"), i(0) })),
-	ms("int", fmta("integral <> dif <> <>", { i(1), i(2, "x"), i(0) })),
-	ms("der", fmta("frac(dif <>, dif <>)<>", { i(1), i(2), i(3) })),
-	ms("pder", fmta("frac(partial <>, partial <>) <>", { i(1, "y"), i(2, "x"), i(0) })),
+	ms(".lim", fmta("lim_(<> ->> <>) <>", { i(1, "n"), i(2, "oo"), i(0) })),
+	ms(".sum", fmta("sum_(<>=<>)^<> <>", { i(1, "n"), i(2, "1"), i(3, "oo"), i(0) })),
+	ms(".prod", fmta("product_(<>=<>)^<> <>", { i(1, "n"), i(2, "1"), i(3, "oo"), i(0) })),
+	ms(".int", fmta("integral <> dif <> <>", { i(1), i(2, "x"), i(0) })),
+	ms(".der", fmta("frac(dif <>, dif <>)<>", { i(1), i(2), i(3) })),
+	ms(".pder", fmta("frac(partial <>, partial <>) <>", { i(1, "y"), i(2, "x"), i(0) })),
 }, { key = "typst" })

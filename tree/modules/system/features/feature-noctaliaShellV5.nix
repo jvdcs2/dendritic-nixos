@@ -4,6 +4,11 @@ with inputs.noctalia-shell-v5; {
     imports = [
       nixosModules.default
     ];
+
+    # services.displayManager.noctalia-greeter = {
+    #   enable = true;
+    # };
+
     programs.noctalia = {
       enable = true;
       systemd.enable = true;

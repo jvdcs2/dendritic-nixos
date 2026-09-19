@@ -115,7 +115,7 @@ S("n", "<leader>/", function()
 	Snacks.picker.grep({ cwd = vim.fs.dirname(vim.api.nvim_buf_get_name(0)) })
 end, { desc = "Grep cwd" })
 S("n", "<leader>?", function()
-	Snacks.picker.grep({ cwd = vim.fs.dirname(vim.api.nvim_buf_get_name(0)) })
+	Snacks.picker.grep()
 end, { desc = "Grep in current buffer's dir" })
 
 S("n", "<leader>b", function()

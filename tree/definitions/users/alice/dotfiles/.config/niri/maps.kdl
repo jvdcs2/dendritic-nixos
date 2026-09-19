@@ -30,7 +30,7 @@ binds {
     Super+Slash        repeat=false           { spawn-sh "vicinae vicinae://launch/files/search"; }
 
     Super+Shift+Space  repeat=false           { spawn-sh "nu ~/.config/niri/scripts/nu/custom-run.nu"; }
-    Super+E            repeat=false           { spawn-sh "nu ~/.config/niri/scripts/nu/yazi-kmux.nu"; }
+    Super+E            repeat=false           { spawn-sh "nu ~/.config/niri/scripts/nu/yazi-kmux.nu --path '~ ~/[T1-2627]/MTH203A/ ~/[T1-2627]/MTH221A/'"; }
     Super+N            repeat=false           { spawn-sh "nu ~/.config/niri/scripts/nu/fzf-kmux.nu"; }
     Super+Shift+N      repeat=false           { spawn-sh "nu ~/.config/niri/scripts/nu/new-kmux.nu"; }
                 

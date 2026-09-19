@@ -1,6 +1,6 @@
 use lib-kmux.nu *
 use std
-def main [path?: string] {
+def main [--path: string] {
     let n = "kmux-yazi"
     if (is_session_existing --session_name $n) {
         if (is_session_visible --name $n) {
@@ -12,3 +12,4 @@ def main [path?: string] {
         kitty --class $"kitty-($n)" -- tmux new-session -s ($n) nu -e $"y ($path)"
     }
 }
+
