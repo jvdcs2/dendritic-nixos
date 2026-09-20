@@ -1,8 +1,13 @@
 use lib-kmux.nu *
 use std
-def main [--path: string] {
-    let n = "kmux-YAZI"
-    let conf = ($env.HOME | path join ".config/tmux/kmux.conf") 
+
+def main [
+  --instance: string, 
+  --config: string = "kmux.conf",
+  --command: string = "echo 'Hello World'"
+] {
+    let n = $instance
+    let conf = ($env.HOME | path join $".config/tmux/($config)") 
     let exists = (tmux -L $n has-session -t $n | complete).exit_code == 0
 
     if $exists {
@@ -12,7 +17,8 @@ def main [--path: string] {
             exec nohup sh -c $"kitty --class=kitty-($n) -- tmux -L ($n) attach -t ($n)" o+e> (std null-device)
         }
     } else {
-        let tmux_cmd = [tmux -L $n -f $conf new-session -s $n nu -e $"$env.KMUX_YAZI = 1; y ~ ~/[T1-2627]/MTH203A/ ~/[T1-2627]/MTH221A/ ~/[T1-2627]/GERIZAL/ ~/[T1-2627]/LCFILIB/ ~/[T1-2627]/GELITPH/"]
+        let tmux_cmd = [tmux -L $n -f $conf new-session -s $n nu -e $command]
         kitty --class $"kitty-($n)" -- ...$tmux_cmd
     }
 }
+

@@ -236,6 +236,7 @@ swayimg.gallery.set_text("bottomright", { "{name}" })
 -- [keys.viewer]
 --------------------------------------------------------------------------
 -- F1 = help  -> no built-in help overlay function currently exposed, omitted
+
 swayimg.viewer.on_key("Home", function()
 	swayimg.viewer.switch_image("first")
 end)
@@ -410,10 +411,10 @@ end)
 swayimg.slideshow.on_key("End", function()
 	swayimg.slideshow.switch_image("last")
 end)
-swayimg.slideshow.on_key("Prior", function()
+swayimg.slideshow.on_key("h", function()
 	swayimg.slideshow.switch_image("prev")
 end)
-swayimg.slideshow.on_key("Next", function()
+swayimg.slideshow.on_key("l", function()
 	swayimg.slideshow.switch_image("next")
 end)
 swayimg.slideshow.on_key("Shift+r", function()

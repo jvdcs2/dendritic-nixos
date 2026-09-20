@@ -8,7 +8,6 @@ prepend_keymap = [
     "<A-c>",
   ], run = "plugin kmux-yazi -- close", desc = "close tab" },
 
-
   # DISABLED
   { on = [
     "t",

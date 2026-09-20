@@ -17,7 +17,7 @@ input {
         scroll-method "two-finger"
     }
     mouse {
-        scroll-factor 0.2
+        scroll-factor 0.4
         // scroll-method "no-scroll"
         // natural-scroll
         // off
