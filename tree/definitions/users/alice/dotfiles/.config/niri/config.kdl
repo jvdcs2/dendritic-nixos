@@ -1,5 +1,7 @@
-spawn-at-startup "xwayland-satellite" 
-spawn-at-startup "keyd-application-mapper" "-d"
+spawn-sh-at-startup "xwayland-satellite" 
+spawn-sh-at-startup "keyd-application-mapper -d"
+spawn-sh-at-startup "sleep 1; cd ~ && exec todoist-electron > /tmp/todoist.log 2>&1"
+spawn-sh-at-startup "nu ~/.config/niri/scripts/nu/yazi-kmux.nu --path '~ ~/[T1-2627]/MTH203A/ ~/[T1-2627]/MTH221A/ ~/[T1-2627]/GERIZAL/ ~/[T1-2627]/LCFILIB/ ~/[T1-2627]/GELITPH/'"
 
 include "window-rules.kdl"
 include "background.kdl"

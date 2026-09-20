@@ -1,5 +1,14 @@
 [mgr]
 prepend_keymap = [
+  # OVERRIDES
+  # { on = [
+  #   "<C-Space>",
+  # ], run = "plugin kmux-yazi -- quit", desc = "quit" },
+  { on = [
+    "<A-c>",
+  ], run = "plugin kmux-yazi -- close", desc = "close tab" },
+
+
   # DISABLED
   { on = [
     "t",
@@ -38,9 +47,6 @@ prepend_keymap = [
     "q",
   ], run = "tab_switch --relative -1", desc = "previous tab" },
   { on = [
-    "<C-Space>",
-  ], run = "quit", desc = "quit" },
-  { on = [
     "e",
   ], run = "tab_switch --relative 1", desc = "next tab" },
   { on = [
@@ -49,9 +55,6 @@ prepend_keymap = [
   { on = [
     "L",
   ], run = "open --interactive", desc = "open selected files interactively" },
-  { on = [
-    "<A-c>",
-  ], run = "close", desc = "close tab" },
 
   # === PLUGINS ===
 

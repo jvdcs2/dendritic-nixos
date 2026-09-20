@@ -104,17 +104,17 @@ S("n", "<leader>e", function()
 	end
 end, { desc = "Toggle focus between explorer and last window" })
 
-S("n", "<leader>f", function()
+S("n", "<leader>F", function()
 	Snacks.picker.files({ cwd = vim.fs.dirname(vim.api.nvim_buf_get_name(0)) })
 end, { desc = "Find files in current buffer's dir" })
-S("n", "<leader>F", function()
+S("n", "<leader>f", function()
 	Snacks.picker.files({ cwd = Snacks.git.get_root() })
 end, { desc = "Find files in root" })
 
-S("n", "<leader>/", function()
+S("n", "<leader>?", function()
 	Snacks.picker.grep({ cwd = vim.fs.dirname(vim.api.nvim_buf_get_name(0)) })
 end, { desc = "Grep cwd" })
-S("n", "<leader>?", function()
+S("n", "<leader>/", function()
 	Snacks.picker.grep()
 end, { desc = "Grep in current buffer's dir" })
 
