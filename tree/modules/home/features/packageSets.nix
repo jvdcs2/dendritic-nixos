@@ -37,6 +37,9 @@
         ffmpeg # audio/video converter swiss army knife
         spotdl # download Spotify tracks
         yt-dlp # download YouTube videos
+        deno
+        (whisper-cpp.override {vulkanSupport = true;})
+        curl
       ];
     };
 

@@ -59,6 +59,9 @@
     niri-src.url = "github:niri-wm/niri";
     niri-src.inputs.nixpkgs.follows = "nixpkgs";
 
+    niri-screen-recorder.url = "github:matthew-hre/niri-screen-recorder";
+    niri-screen-recorder.inputs.nixpkgs.follows = "nixpkgs";
+
     stylix.url = "github:nix-community/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
 

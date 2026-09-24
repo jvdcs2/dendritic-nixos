@@ -15,6 +15,7 @@
       "video"
       "keyd"
       "mpd"
+      "dialout" #for esp32 flashing
     ];
 
     imports = with modules.homeManager; [

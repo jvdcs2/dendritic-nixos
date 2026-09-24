@@ -16,18 +16,20 @@ binds {
     Super+Shift+P      repeat=false           { spawn-sh "~/.config/niri/scripts/sh/color-picker.sh"; }
     Super+G            repeat=false           { spawn-sh "~/.config/niri/scripts/sh/steam-wrapper.sh"; }
     Super+Y            repeat=false           { spawn-sh "~/.config/niri/scripts/sh/yacal.sh"; }
-    Super+Q            repeat=false           { spawn-sh "~/.config/niri/scripts/sh/emacs-scratch.sh"; }
-    Super+Shift+Q      repeat=false           { spawn-sh "~/.config/niri/scripts/sh/emacs-open-scratch.sh"; }
+    // Super+Q            repeat=false           { spawn-sh "~/.config/niri/scripts/sh/emacs-scratch.sh"; }
+    // Super+Shift+Q      repeat=false           { spawn-sh "~/.config/niri/scripts/sh/emacs-open-scratch.sh"; }
     // Super+T            repeat=false           { spawn-sh "~/.config/niri/scripts/sh/emacs-todo.sh"; }
     Super+T            repeat=false           { spawn-sh "todoist-electron"; }
+    Super+R            repeat=false           { spawn-sh "niri-screen-recorder toggle"; }
 
     Super+S               { screenshot show-pointer=false; }
     // Super+Shift+S         { spawn-sh "kitty yazi ~/saves/images/screenshots"; }
 
     // kmux
     Super+Shift+S      repeat=false           { spawn-sh "nu ~/.config/niri/scripts/nu/kmux.nu --instance 'kmux-SCREENSHOTS' --config kmux.conf --command '$env.KMUX_YAZI = 1; y ~/saves/images/screenshots/'"; }
-    Super+E      repeat=false           { spawn-sh "nu ~/.config/niri/scripts/nu/kmux.nu --instance 'kmux-YAZI' --config kmux.conf --command '$env.KMUX_YAZI = 1; y ~ ~/[T1-2627]/MTH203A/ ~/[T1-2627]/MTH221A/ ~/[T1-2627]/GERIZAL/ ~/[T1-2627]/LCFILIB/ ~/[T1-2627]/GELITPH/'"; }
+    Super+E      repeat=false           { spawn-sh "nu ~/.config/niri/scripts/nu/kmux.nu --instance 'kmux-YAZI' --config kmux.conf --command '$env.KMUX_YAZI = 1; y ~ ~/[T1-2627]/[MTH203A]/ ~/[T1-2627]/[MTH221A]/ ~/[T1-2627]/[GERIZAL]/ ~/[T1-2627]/[LCFILIB]/ ~/[T1-2627]/[GELITPH]/'"; }
     Super+Shift+C repeat=false { spawn-sh "nu ~/.config/niri/scripts/nu/kmux.nu --instance 'kmux-CONFIG' --config kmux.conf --command 'cd /etc/nixos; nvim -c \"lua vim.schedule(function() Snacks.picker.files() end)\"' "; }
+    Super+Q repeat=false { spawn-sh "nu ~/.config/niri/scripts/nu/kmux.nu --instance 'kmux-SCRATCH' --config kmux.conf --command 'cd ~/syncthing/scratch; nvim init.txt -c \"lua vim.schedule(function() Snacks.picker.files() end)\"'" ; }
 
     Super+Space        repeat=false           { spawn-sh "vicinae toggle"; }
     Super+P            repeat=false           { spawn-sh "vicinae vicinae://launch/clipboard/history"; }

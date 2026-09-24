@@ -718,6 +718,26 @@
         "type": "github"
       }
     },
+    "niri-screen-recorder": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1770921348,
+        "narHash": "sha256-AqaISNMLwCzXtiDLdkxSv0fCp8K95EpFIHVqh/pK+fQ=",
+        "owner": "matthew-hre",
+        "repo": "niri-screen-recorder",
+        "rev": "bf930d80b5fb4de6260c69edea5df429938eb640",
+        "type": "github"
+      },
+      "original": {
+        "owner": "matthew-hre",
+        "repo": "niri-screen-recorder",
+        "type": "github"
+      }
+    },
     "niri-src": {
       "inputs": {
         "nixpkgs": [
@@ -1191,6 +1211,7 @@
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nh": "nh",
         "niri-flake": "niri-flake",
+        "niri-screen-recorder": "niri-screen-recorder",
         "niri-src": "niri-src",
         "nixpkgs": "nixpkgs_5",
         "nixpkgs-25_05": "nixpkgs-25_05",

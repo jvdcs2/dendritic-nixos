@@ -56,6 +56,7 @@
       feature-audio
       feature-git
 
+      feature-niriScreenRecorder
       feature-claudeCode
       feature-bluetooth
       feature-syncthing

@@ -13,6 +13,7 @@
     zramSwap.enable = true;
 
     nix = {
+      nixPath = ["nixpkgs=${inputs.nixpkgs}"];
       extraOptions = ''
         experimental-features = nix-command pipe-operators
         fallback = true
