@@ -106,7 +106,7 @@
         todoist-electron # synchronized todo
         # gocryptfs # encrypted filesystem
         # newsflash # rss reader
-        google-chrome
+        # google-chrome
         fragments # torrents
         transmission_4-gtk # torrents
         firefox

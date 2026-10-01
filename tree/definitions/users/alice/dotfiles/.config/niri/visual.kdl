@@ -11,9 +11,10 @@ blur {
 animations {
     // Uncomment to turn off all animations.
     // You can also put "off" into each individual animation to disable it.
-    // off
+    off
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 0.8
+    // slowdown 1
+    slowdown 0.5
     // Individual animations.
     workspace-switch {
         spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
@@ -104,11 +105,14 @@ layout {
         // active-color "#86adcd"
         // active-color "#d1d1d1"
         // active-color "#ffffff"
-        active-color "#323231"
+        // active-color "#323231"
         // on
         // inactive-color "#323231"
-        inactive-color "#222221"
+        inactive-gradient from="#4b4b4a" to="#323231"  angle=-180
+        // inactive-color "#222221"
         urgent-color "#86adcd"
+        active-gradient from="#86adcd" to="#60967d" angle=180
+        // inactive-gradient from="#323231"
     }
     shadow {
         on
