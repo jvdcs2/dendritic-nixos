@@ -18,7 +18,8 @@
           cm_unicode
           ibm-plex
           # sans serif
-          dm-sans
+          # dm-sans
+          helvetica-neue-lt-std
           # monospace
           julia-mono
           # ioskeley-mono.normal-NF #disabled cause kitty literally suffers with ligatures on this for some reason

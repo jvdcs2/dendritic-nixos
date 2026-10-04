@@ -97,7 +97,6 @@
       feature-stylix
 
       setting-stylix-fonts-sleek
-      # setting-stylix-fonts-pretty
 
       setting-stylix-colors-trasmus
       # setting-stylix-colors-rosepine
