@@ -11,7 +11,7 @@
       plugins = {
         inherit
           (pkgs.yaziPlugins)
-          full-border
+          # full-border
           toggle-pane
           smart-enter
           mediainfo
@@ -22,7 +22,6 @@
           mount
           sudo
           ouch
-
           smart-filter
           # starship
           chmod

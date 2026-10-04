@@ -25,6 +25,7 @@ image/svg+xml=zen.desktop
 image/webp=zen.desktop
 image/x-icon=zen.desktop
 video/webm=zen.desktop
+x-scheme-handler/claude=com.anthropic.Claude.desktop
 
 [Added Associations]
 text/html=zen.desktop;zen-beta.desktop;userapp-Firefox-DJD9U3.desktop;firefox.desktop;

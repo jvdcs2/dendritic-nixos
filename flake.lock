@@ -119,6 +119,26 @@
         "type": "github"
       }
     },
+    "claude-desktop": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790682776,
+        "narHash": "sha256-u5LQQQ2o5jaoob1QhHd9W4ErK9mTPQ0UzPrk9PIeK3E=",
+        "owner": "nmcbride",
+        "repo": "claude-desktop-nix",
+        "rev": "03584ef67c46d4c72bf522f25cbeec02663d63de",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nmcbride",
+        "repo": "claude-desktop-nix",
+        "type": "github"
+      }
+    },
     "corefonts": {
       "flake": false,
       "locked": {
@@ -1202,6 +1222,7 @@
       "inputs": {
         "affinity": "affinity",
         "claude-code": "claude-code",
+        "claude-desktop": "claude-desktop",
         "determinate": "determinate",
         "emacs-overlay": "emacs-overlay",
         "flake-parts": "flake-parts_3",
@@ -1681,11 +1702,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787854095,
-        "narHash": "sha256-mnz44qu/aLje0/FOIvH/nNBjKtjIo/oi/32mxGayi9Q=",
+        "lastModified": 1791022445,
+        "narHash": "sha256-jr7YVkvOYS+bJjzBwoqtN8b8inJN8UDWziWufAWH1SY=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "99cb519f07578ee8e0e6cdb0cae06d9343a60fe8",
+        "rev": "e56900732d1fa6f360db502451a457ffe3ca1e6e",
         "type": "github"
       },
       "original": {

@@ -57,7 +57,9 @@
       feature-git
 
       feature-niriScreenRecorder
-      feature-claudeCode
+      feature-termfilechooser
+      feature-claudeDesktop
+      # feature-claudeCode
       feature-bluetooth
       feature-syncthing
       feature-crabHole

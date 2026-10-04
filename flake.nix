@@ -45,6 +45,9 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     neovim-nightly-overlay.inputs.nixpkgs.follows = "nixpkgs";
 
+    claude-desktop.url = "github:nmcbride/claude-desktop-nix";
+    claude-desktop.inputs.nixpkgs.follows = "nixpkgs";
+
     # ambxst-shell.url = "github:Axenide/Ambxst";
     # ambxst-shell.inputs.nixpkgs.follows = "nixpkgs";
 
