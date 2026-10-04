@@ -70,7 +70,18 @@
       };
       extensions = with inputs.vicinae-extensions.packages.${system}; [
         process-manager
-        niri
+
+        (niri.overrideAttrs (old: {
+          postPatch =
+            (old.postPatch or "")
+            + ''
+              f=src/utils.ts
+              [ -e "$f" ] || f=src/lib/niri.ts
+              sed -i "1i import { closeMainWindow } from '@vicinae/api';" "$f"
+              substituteInPlace "$f" \
+                --replace-fail "showSuccess(successMessage);" "showSuccess(successMessage); if (action.startsWith('focus-window')) closeMainWindow({ clearRootSearch: true });"
+            '';
+        }))
         nix
 
         wifi-commander
