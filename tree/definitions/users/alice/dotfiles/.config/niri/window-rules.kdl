@@ -9,6 +9,12 @@ window-rule {
     default-column-width { proportion 0.9; }
     default-window-height { proportion 0.9; }
 }
+window-rule {
+    match title="^termfilechooser$"
+    open-floating true
+    default-column-width { proportion 0.6; }
+    default-window-height { proportion 0.5; }
+}
 layer-rule {
     match namespace="^vicinae$"
     background-effect {
