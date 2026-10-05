@@ -36,6 +36,8 @@
       setting-console
       setting-fonts
       setting-nix
+
+      setting-sleepFix
       # setting-cafeInternetFix
       # ===
 

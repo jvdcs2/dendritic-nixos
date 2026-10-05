@@ -19,7 +19,7 @@
           ibm-plex
           # sans serif
           # dm-sans
-          helvetica-neue-lt-std
+          # helvetica-neue-lt-std #disabled in favor of 'helveticaFixed'
           # monospace
           julia-mono
           # ioskeley-mono.normal-NF #disabled cause kitty literally suffers with ligatures on this for some reason
