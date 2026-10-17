@@ -204,6 +204,7 @@
       environment.systemPackages = with pkgs; [
         kitty # GPU-accelerated terminal emulator
         waybar # who doesnt know this
+        parabolic # yt-dlp gui
       ];
     };
 

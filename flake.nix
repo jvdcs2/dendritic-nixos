@@ -10,6 +10,7 @@
 
     determinate.url = "github:DeterminateSystems/determinate";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-new.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-25_11.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-25_05.url = "github:NixOS/nixpkgs/nixos-25.05";
 

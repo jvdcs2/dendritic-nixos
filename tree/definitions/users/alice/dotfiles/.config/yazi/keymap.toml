@@ -7,6 +7,9 @@ prepend_keymap = [
   { on = [
     "<A-c>",
   ], run = "plugin kmux-yazi -- close", desc = "close tab" },
+  { on = [
+    "<A-n>",
+  ], run = "plugin kmux-yazi -- tab_create --current", desc = "close tab" },
 
   # DISABLED
   { on = [

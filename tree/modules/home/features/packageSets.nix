@@ -36,7 +36,6 @@
       home.packages = with pkgs; [
         ffmpeg # audio/video converter swiss army knife
         spotdl # download Spotify tracks
-        yt-dlp # download YouTube videos
         deno
         (whisper-cpp.override {vulkanSupport = true;})
         curl
@@ -68,6 +67,8 @@
         calibre # various library converter stuff
         djvu2pdf # the name
         poppler-utils # includes a pdf to image converter
+        libnotify #notiftools
+        jq # jq duh
       ];
     };
 

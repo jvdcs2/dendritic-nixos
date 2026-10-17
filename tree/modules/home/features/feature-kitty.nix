@@ -2,9 +2,9 @@
   flake.modules.homeManager.feature-kitty = {...}: {
     programs.kitty = {
       enable = true;
-
       settings = {
         confirm_os_window_close = 0;
+        notify_on_cmd_finish = "always 10.0 notify";
         show_hyperlink_targets = "yes";
         open_url_with = "zen";
 

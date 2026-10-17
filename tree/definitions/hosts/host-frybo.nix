@@ -2,6 +2,7 @@
   library,
   modules,
   helpers,
+  inputs,
   ...
 }: {
   flake.modules = library.defineHostModule {
@@ -15,6 +16,16 @@
         from = "/etc/nixos/tree/definitions/users/alice/dotfiles";
         to = "/home/alice";
         user = "alice";
+      })
+
+      ({pkgs, ...}: let
+        pkgsNew = import inputs.nixpkgs-new {
+          system = pkgs.stdenv.hostPlatform.system;
+        };
+      in {
+        environment.systemPackages = [
+          pkgsNew.yt-dlp
+        ];
       })
 
       # === MISCELLANEOUS ===
